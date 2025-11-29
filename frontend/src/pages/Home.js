@@ -18,8 +18,8 @@ function Home() {
   return (
     <div className="home-container">
       <div className="home-header">
-        <h1>Welcome to Gestin</h1>
-        <p>Select your role to access the system</p>
+        <h1>TRECE DOCE TRACKING</h1>
+        <p>Comprehensive management of international shipments</p>
       </div>
       <div className="roles-container">
         <div className="role-card">
