@@ -97,6 +97,20 @@
 .dashboard-header {
   padding: 30px 40px;
   border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-left svg {
+  color: #333;
+  stroke: #333;
 }
 
 .dashboard-header h1 {
@@ -104,6 +118,17 @@
   font-size: 28px;
   font-weight: 700;
   color: #333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-right svg {
+  color: #333;
+  stroke: #333;
 }
 
 .dashboard-content {
@@ -151,6 +176,11 @@
 .card-icon.orange {
   background: #fff3e0;
   color: #ff9800;
+}
+
+.card-icon.purple {
+  background: #f3e5f5;
+  color: #9c27b0;
 }
 
 .card-icon svg {
@@ -259,6 +289,263 @@
 }
 
 .action-link p {
+  margin: 0;
+  color: #999;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 200px;
+}
+
+.empty-state svg {
+  color: #ccc;
+  stroke: #ccc;
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Rapid Actions Section */
+.rapid-actions-section {
+  margin-top: 30px;
+}
+
+.rapid-actions-section h2 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.rapid-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.rapid-action-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rapid-action-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.rapid-action-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  margin-bottom: 16px;
+}
+
+.rapid-action-icon svg {
+  color: #333;
+  stroke: #333;
+}
+
+.rapid-action-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.rapid-action-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #999;
+  line-height: 1.4;
+}
+
+/* Track Shipment Section */
+.track-shipment-section {
+  margin-bottom: 30px;
+}
+
+.track-shipment-card {
+  background: #e3f2fd;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.track-shipment-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.track-shipment-header svg {
+  color: #2196f3;
+  stroke: #2196f3;
+}
+
+.track-shipment-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.track-shipment-description {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.track-shipment-input-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.track-shipment-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.track-shipment-input:focus {
+  border-color: #2196f3;
+}
+
+.track-shipment-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.track-shipment-button:hover {
+  background: #444;
+}
+
+.track-shipment-button svg {
+  color: white;
+  stroke: white;
+}
+
+/* Rapid Actions List (Customer Dashboard) */
+.rapid-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.rapid-action-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.rapid-action-item:last-child {
+  border-bottom: none;
+}
+
+.rapid-action-item:hover {
+  background: #f9f9f9;
+  margin: 0 -25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.rapid-action-item.highlighted {
+  background: #f3e5f5;
+  border: 1px solid #9c27b0;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 0;
+}
+
+.rapid-action-item.highlighted:hover {
+  background: #e1bee7;
+  margin: 0;
+  padding: 15px;
+}
+
+.rapid-action-item-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  flex-shrink: 0;
+}
+
+.rapid-action-item-icon svg {
+  color: #666;
+  stroke: #666;
+}
+
+.rapid-action-item-icon.purple {
+  background: #9c27b0;
+}
+
+.rapid-action-item-icon.purple svg {
+  color: white;
+  stroke: white;
+}
+
+.rapid-action-item-content {
+  flex: 1;
+}
+
+.rapid-action-item-content strong {
+  display: block;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.rapid-action-item-content p {
   margin: 0;
   color: #999;
   font-size: 13px;
