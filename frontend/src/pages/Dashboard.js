@@ -107,6 +107,44 @@ function Dashboard({ role }) {
                 <span>Calculator</span>
               </div>
             </>
+          ) : role === 'superadmin' ? (
+            <>
+              <div className="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+                <span>Dashboard</span>
+              </div>
+              <div className="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 7h18M3 12h18M3 17h18" />
+                </svg>
+                <span>Companies</span>
+              </div>
+              <div className="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                  <line x1="1" y1="10" x2="23" y2="10" />
+                </svg>
+                <span>Billing</span>
+              </div>
+              <div className="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 3l18 18M21 3L3 21" />
+                </svg>
+                <span>Monitoring</span>
+              </div>
+              <div className="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82A1.65 1.65 0 0 0 3 12c0-.56.24-1.06.63-1.41A1.65 1.65 0 0 0 3 8.36l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06c.45.45.99.75 1.62.92A1.65 1.65 0 0 0 9 5.09V5a2 2 0 0 1 4 0v.09c.35.08.68.21.98.36.63-.17 1.17-.47 1.62-.92l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06c-.39.35-.63.85-.63 1.41 0 .56.24 1.06.63 1.41z" />
+                </svg>
+                <span>Configuration</span>
+              </div>
+            </>
           ) : (
             <>
               <div className="nav-item active">
@@ -278,6 +316,58 @@ function Dashboard({ role }) {
                   </div>
                 </div>
               </>
+            ) : role === 'superadmin' ? (
+              <>
+                <div className="summary-card">
+                  <div className="card-icon blue">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <path d="M9 9h6v6H9z" />
+                    </svg>
+                  </div>
+                  <div className="card-content">
+                    <h3>Total Companies</h3>
+                    <div className="card-value">3</div>
+                    <p>Companies registered in the system</p>
+                  </div>
+                </div>
+                <div className="summary-card">
+                  <div className="card-icon green">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                    </svg>
+                  </div>
+                  <div className="card-content">
+                    <h3>Active Companies</h3>
+                    <div className="card-value">2</div>
+                    <p>Companies with active service</p>
+                  </div>
+                </div>
+                <div className="summary-card">
+                  <div className="card-icon orange">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" />
+                    </svg>
+                  </div>
+                  <div className="card-content">
+                    <h3>Suspended Companies</h3>
+                    <div className="card-value">1</div>
+                    <p>Companies with suspended service</p>
+                  </div>
+                </div>
+                <div className="summary-card">
+                  <div className="card-icon green">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M12 1v22" />
+                    </svg>
+                  </div>
+                  <div className="card-content">
+                    <h3>Monthly Income</h3>
+                    <div className="card-value">$499.98</div>
+                    <p>Recurring monthly income</p>
+                  </div>
+                </div>
+              </>
             ) : (
               <>
                 <div className="summary-card">
@@ -434,6 +524,43 @@ function Dashboard({ role }) {
                       <div className="rapid-action-item-content">
                         <strong>View Invoices</strong>
                         <p>Review your invoices</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : role === 'superadmin' ? (
+            <>
+              <div className="dashboard-widgets">
+                <div className="widget-card large">
+                  <h2>System Summary</h2>
+                  <p className="widget-subtitle">General state of operations</p>
+                  <div className="widget-content">
+                    <div className="widget-item">
+                      <span>Activity Rate</span>
+                      <span className="widget-value">67 %</span>
+                    </div>
+                    <div className="widget-item">
+                      <span>Average Revenue/Company</span>
+                      <span className="widget-value">$ 249.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="widget-card large">
+                  <h2>Rapid Actions</h2>
+                  <p className="widget-subtitle">Frequent system actions</p>
+                  <div className="rapid-actions-list simple">
+                    <div className="rapid-action-item">
+                      <div className="rapid-action-item-content">
+                        <strong>Managing Businesses</strong>
+                        <p>View and manage all companies</p>
+                      </div>
+                    </div>
+                    <div className="rapid-action-item">
+                      <div className="rapid-action-item-content">
+                        <strong>Generate Invoice</strong>
+                        <p>Create invoices for businesses</p>
                       </div>
                     </div>
                   </div>
